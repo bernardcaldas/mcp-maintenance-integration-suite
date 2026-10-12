@@ -7,7 +7,7 @@ end to end with Claude Desktop, and **published the write-up on SAP Community**.
 
 ## Demo
 
-[![Claude Desktop calling the MCP Server on SAP Integration Suite: a summary before a meeting](https://img.youtube.com/vi/h9AUzt85rGk/hqdefault.jpg)](https://www.youtube.com/watch?v=h9AUzt85rGk)
+<a href="https://www.youtube.com/watch?v=h9AUzt85rGk"><img src="https://img.youtube.com/vi/h9AUzt85rGk/hqdefault.jpg" alt="Claude Desktop calling the MCP Server on SAP Integration Suite: a summary before a meeting" width="800"></a>
 
 Claude Desktop calling the MCP Server on SAP Integration Suite. No transaction code, no filter
 screen, no SAP GUI open anywhere.
@@ -22,6 +22,11 @@ screen, no SAP GUI open anywhere.
 | Who operates it | me: auth, rate limit, tracing, spec upgrades | SAP Integration Suite |
 | Reference pattern | Pattern 2, custom MCP server | MCP Gateway |
 | Code | [mcp-maintenance-cap](https://github.com/bernardcaldas/mcp-maintenance-cap) | the bridge in this repo |
+
+![The MCP Manutencao package in SAP Integration Suite, with five artifacts: the MCP Server Maintenance_Order_mcpServer, the Maintenance Order API artifact, and the Mock Maintenance Order and Mock Maintenance Order Operation iFlows, plus a test iFlow.](docs/images/tela-integration.png)
+
+The package as built in my SAP Integration Suite trial tenant: the MCP Server, the API artifact and
+the two iFlows that simulate the backend.
 
 ![SAP Architecture Center decision guide for third-party MCP access: governed tool access maps to MCP Gateway in SAP Integration Suite (v2), while a custom MCP server with full code control maps to Pattern 2 on SAP BTP (v1).](docs/images/02-decision-guide.png)
 
@@ -66,9 +71,6 @@ you see in the demo come from two iFlows in my own trial tenant that reproduce t
 No customer data and no productive SAP system is involved. This is an independent personal project,
 not an SAP product, and it is not affiliated with or endorsed by SAP.
 
-## Honest scope
-
-![What is real and what is simulated: the MCP Server, API artifact, policies, XSUAA authentication and the full chain are real; the maintenance order records and the S/4HANA backend are simulated by two iFlows.](docs/images/06-escopo-honesto.png)
 
 A validated proof of concept, read-only, not production. The integration chain is what you would
 deploy against a real backend; the maintenance order records are simulated by two iFlows, because
